@@ -1,0 +1,120 @@
+Tools used:
+https://www.calculator.net/standard-deviation-calculator.html
+https://www.calculator.net/z-score-calculator.html
+
+
+Could you make a prediction about the trend of the total revenue for the third quarter for both Adidas and Nike? 
+If yes, do you expect the revenue of 2003 to increase or decrease during the same quarter?
+
+Adidas Total revenue for Q3
+
+Year	Q3 Revenue
+2000	1677
+2001	1790
+2002	1868
+
+Standard Deviation, σ: 96.03 (sample SD)
+Mean is 1778
+
+Confidence	Range	
+0.6828	1,681.97000 – 1,874.03000	
+0.80	1,654.93260 – 1,901.06740
+0.90	1,620.04471 – 1,935.95529
+0.95	1,589.78466 – 1,966.21534
+
+Z-score = 0.93721
+Probability of x<1868: 0.83	
+Probability of x>1868: 0.17	
+
+
+Adidas revenue for Q3 is increasing. The probablity that the 2003 Q3 revenue will increase is 17%. This probablity is greater than that of Nike which is 13% that Nike's 2003 Q3 revenue will increase. Calculation for Nike is shown later.
+
+Using Laplace Estimator
+
+Year	Log Q3 Addidas Revenue
+2000	7.42
+2001	7.49
+2002	7.53
+
+Estimate the probability that revenue will increase in Q3 2003 to say log(revenue) = 7.54
+Fill in the missing value to get a data sets shown below:
+{7.42, 7.43, 7.44, 7.45, 7.46, 7.47, 7.48, 7.49, 7.50, 7.51, 7.52, 7.53, 7.54}
+
+Probability the revenue will be 7.54 = 1/13 = 7.7%
+
+------
+Nike Total revenue for Q3
+
+Year	Q3 Revenue
+2000	2636.7
+2001	2613.7
+2002	2796.3
+
+Standard Deviation, σ: 99.68 (sample SD)
+Mean is 2682.233	
+
+Z-score = 1.14699
+Probability of x<2796: 0.87	
+Probability of x>2796: 0.13	
+
+
+A linear regression will show that Nike's revenue is inceasing.
+There is 13% probability that Nike's revenue will increase in the next quarter. There is 87% probability that revenue will fall.
+
+Using Laplace Estimator
+
+Year	Log Q3 Nike Revenue
+2000	3.42
+2001	3.41
+2002	3.44
+
+Estimate the probability that revenue will increase in Q3 2003 to say log(revenue) = 3.45
+Fill in the missing value to get a data sets shown below:
+{3.42, 3.41, 3.44, 3.43, 3.45}
+
+Probability the revenue will be 3.45 = 1/5 = 20%
+
+------- 
+Could you make the same prediction about Adidas’s sales in China and about the price index for the same quarter in 2003? If no, can you make a conclusion for these features about any of the quarters?
+------
+Adidas Revenue for Q3 in china
+2000, 2001, 2002
+310.55, 342.32, 377.63
+
+
+Standard Deviation, σ: 33.51 (sample SD)
+Mean, μ:	343.5
+
+Z-score = 1.01459
+Probability of x<377: 0.84485	
+Probability of x>377: 0.15515	
+Probability of 343<x<377: 0.34485
+
+
+The raw data show an increase in revenue every Q3. It is most likely that Q3 revenues in Adidas China will continue to increase. Using the Z score and calculating the probability that Q3 2003 revenue will increase for Adidas China, this probability is 15%. Linear regression shows that there is an upward trend in Q3 revenue for Adidads China. The increase is more steeper than for Adidas as a whole. It could be that the China revenue is making a great impact on Adidas' overall revenue.
+
+Adidas Q3 Price Index
+
+2000	322.5
+2001	313.3
+2002	298.9
+
+Adidas' Q3 price index has been falling. This could explain the sustained increase in Q3 revenue. I expect that the price index will continue to fall.
+
+Correlation
+------
+There is negative correlation of Price index to total revenue and regional revenue too. This is applicable to both Adidas and Nike.
+As expected, there is strong positive correlation between total revenue and regional revenue.
+There is also strong positive correlation between Nike's revenue and Adidas total revenue and regional revenue.
+
+			Adidas Revenue	Adidas Europe	Adidas China	Adidas Price Index	Nike Revenue
+Adidas Revenue	1.000000	0.996995	0.991399	-0.969220	0.735339
+Adidas Europe	0.996995	1.000000	0.998558	-0.985379	0.785626
+Adidas China	0.991399	0.998558	1.000000	-0.993105	0.817708
+Adidas Price Index	-0.969220	-0.985379	-0.993105	1.000000	-0.879552
+Nike Revenue	0.735339	0.785626	0.817708	-0.879552	1.000000
+
+------
+Finally, which of the techniques or concepts you have learnt about in this programme so far would you use to draw your conclusions?
+
+I have drawn my conclusion from probability distribution, probability, calculating mean, Z-score, confidence intervals, linear regression and Estimators.
