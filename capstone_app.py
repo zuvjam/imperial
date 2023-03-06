@@ -11,7 +11,7 @@ try:
     st.subheader("Optimisation Data Table")                 
  
 
-    df=pd.read_csv("D:\\Private\\Imperial Business Analytics\\Capstone\\output_file.csv")
+    df=pd.read_csv("output_file.csv")
     df["SmartAlert"]=df["SmartAlert"].round(decimals=0).astype(int)
     df["HeartSafe"]=df["HeartSafe"].round(decimals=0).astype(int)
     df = df.sort_values(by="HeartSafe")
