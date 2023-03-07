@@ -4,9 +4,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 try:
-    
+    feasibilityChart = Image.open('Feasibility_Chart.jpg')
     HS_default = 6000
     SA_default = 1400
     
@@ -16,7 +17,6 @@ try:
             sessiondf = df.loc[(df["HeartSafe"] == HS_units)]
             arrdf=sessiondf.to_numpy()
             SA_units = arrdf[0,1]
-            # if SA_units <= 1400:
             st.session_state.SA_key = SA_units
         else:
             pass
@@ -26,10 +26,8 @@ try:
 
     with st.expander("About"):
         st.write("Use to simulate production and profit")
+        st.image(image=feasibilityChart)
                     
-                 
- 
-
     df=pd.read_csv("output_file.csv")
     df["SmartAlert"]=df["SmartAlert"].round(decimals=0).astype(int)
     df["HeartSafe"]=df["HeartSafe"].round(decimals=0).astype(int)
@@ -39,7 +37,6 @@ try:
     # st.subheader("Optimisation Data Table")  
     # st.write(df)
 
-    
     HeartSafe_Units = st.slider("Choose number of HeartSafe to produce", min_value=0, max_value=6000, value=HS_default, step=1, key="HS_key" , on_change= synchdata)
     SmartAlert_Units = st.slider("Choose number of SmartAlert to produce",min_value=0, max_value=4000, value=SA_default, key="SA_key", step=1)
 
